@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaEvent": {
+      "type": "string"
+    },
+    "tanggalEvent": {
+      "type": "date",
+      "default": "1900-01-01"
+    },
+    "apl_01s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apl-01.apl-01",
+      "mappedBy": "event"
+    }
+  }
+}

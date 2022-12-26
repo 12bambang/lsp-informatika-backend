@@ -1,0 +1,171 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apl_01s",
+  "info": {
+    "singularName": "apl-01",
+    "pluralName": "apl-01s",
+    "displayName": "APL01",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaLengkap": {
+      "type": "string"
+    },
+    "NIK": {
+      "type": "string"
+    },
+    "tempatLahir": {
+      "type": "string"
+    },
+    "tanggalLahir": {
+      "type": "date",
+      "default": "1900-01-01"
+    },
+    "jenisKelamin": {
+      "type": "enumeration",
+      "enum": [
+        "L",
+        "P"
+      ]
+    },
+    "alamat": {
+      "type": "text"
+    },
+    "nomorTelpon": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "pendidikanTerakhir": {
+      "type": "string"
+    },
+    "namaPerusahaan": {
+      "type": "string"
+    },
+    "jabatan": {
+      "type": "string"
+    },
+    "alamatKantor": {
+      "type": "string"
+    },
+    "pekerjaan": {
+      "type": "string"
+    },
+    "skemaSertifikasi": {
+      "type": "enumeration",
+      "enum": [
+        "KKNI",
+        "Okupasi",
+        "Klaster"
+      ]
+    },
+    "tujuanAsesmen": {
+      "type": "enumeration",
+      "enum": [
+        "Sertifikat Baru",
+        "Sertifikasi Ulang"
+      ]
+    },
+    "ijazah": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "pasFoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "identitas": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "transkrip": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "ttdAsesi": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "apl_01_approval": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::apl-01-approval.apl-01-approval",
+      "inversedBy": "apl_01"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "apl_01s"
+    },
+    "asesor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asesor.asesor",
+      "inversedBy": "apl_01s"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "apl_01s"
+    },
+    "skema": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::skema.skema",
+      "inversedBy": "apl_01_s"
+    },
+    "ijazahApproval": {
+      "type": "boolean"
+    },
+    "pasFotoApproval": {
+      "type": "boolean"
+    },
+    "identitasApproval": {
+      "type": "boolean"
+    },
+    "transkripApproval": {
+      "type": "boolean"
+    },
+    "ttdAdmin": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

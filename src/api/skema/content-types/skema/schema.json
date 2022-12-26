@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skemas",
+  "info": {
+    "singularName": "skema",
+    "pluralName": "skemas",
+    "displayName": "Skema",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaSkema": {
+      "type": "string"
+    },
+    "kodeSkema": {
+      "type": "string"
+    },
+    "apl_01_s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::apl-01.apl-01",
+      "mappedBy": "skema"
+    }
+  }
+}

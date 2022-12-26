@@ -11,11 +11,15 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.1.9",
-    "@strapi/plugin-users-permissions": "4.1.9",
-    "@strapi/provider-upload-cloudinary": "4.1.9",
-    "@strapi/strapi": "4.1.9",
-    "pg": "8.7.3"
+    "@strapi/plugin-documentation": "^4.5.0",
+    "@strapi/plugin-i18n": "4.5.0",
+    "@strapi/plugin-users-permissions": "4.5.0",
+    "@strapi/provider-upload-cloudinary": "4.5.0",
+    "@strapi/strapi": "4.5.0",
+    "pg": "8.7.3",
+    "strapi-plugin-fuzzy-search": "^1.10.2",
+    "strapi-plugin-import-export-entries": "^1.18.0",
+    "strapi-plugin-populate-deep": "^1.1.2"
   },
   "author": {
     "name": "A Strapi developer"

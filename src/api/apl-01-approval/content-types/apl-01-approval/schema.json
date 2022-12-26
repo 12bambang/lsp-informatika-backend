@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apl_01_approvals",
+  "info": {
+    "singularName": "apl-01-approval",
+    "pluralName": "apl-01-approvals",
+    "displayName": "APL01Approval",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ijazahApproved": {
+      "type": "boolean"
+    },
+    "pasFotoApproved": {
+      "type": "boolean"
+    },
+    "identitasApproved": {
+      "type": "boolean"
+    },
+    "transkripApproved": {
+      "type": "boolean"
+    },
+    "APL01Approved": {
+      "type": "boolean"
+    },
+    "apl_01": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::apl-01.apl-01",
+      "mappedBy": "apl_01_approval"
+    }
+  }
+}
